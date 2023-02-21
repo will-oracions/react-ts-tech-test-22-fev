@@ -23,9 +23,11 @@
   },
   "scripts": {
     "start": "craco start",
+    "start:dev": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "start:json-server": "json-server ./src/fake/pokemons.json -p 4000"
+    "start:json-server": "json-server ./src/fake/pokemons.json -p 4000",
+    "prestart": "craco test"
   },
   "eslintConfig": {
     "extends": [
