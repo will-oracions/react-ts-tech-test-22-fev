@@ -19,7 +19,7 @@ const PokemonList: React.FC = () => {
         }
     ];
 
-    const displayPockemons = () => pokemons.map((pokemon: any) => <div>
+    const displayPockemons = () => pokemons.map((pokemon: any, i: number) => <div key={i}>
         <Components.PokemonListItem pokemon={pokemon} />
     </div>);
 
