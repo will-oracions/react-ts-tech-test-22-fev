@@ -6,7 +6,8 @@
            "@Pages/*" : ["./pages/*"],
            "@Config/*" : ["./config/*"],
            "@Shared/*" : ["./shared/*"],
-           "@Layout/*" : ["./layout/*"]
+           "@Layout/*" : ["./layout/*"],
+           "@Api/*" : ["./api/*"]
         }
     }
 }

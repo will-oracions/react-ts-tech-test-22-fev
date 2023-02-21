@@ -1,17 +1,24 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import Loading from '@Pages/Loading';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const queryClient = new QueryClient();
+
 root.render(
   <React.StrictMode>
     <Suspense fallback={<Loading />}>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </Suspense>
   </React.StrictMode>
 );

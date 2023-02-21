@@ -9,7 +9,7 @@ type Props = {
 const PokemonListItem: React.FC<Props> = ({ pokemon }) => {
     return <>
         <div>
-            <Link to={`${URLConfig.POKEMON_LIST}/${pokemon.id}`}>Pokemon List item</Link>
+            <Link to={`${URLConfig.POKEMON_LIST}/${pokemon.id}`}>{ pokemon.name }</Link>
         </div>
     </>;
 }
