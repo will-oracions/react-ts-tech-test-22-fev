@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-const PokemonListDetails: React.FC = () => {
+const PokemonDetails: React.FC = () => {
     return <>
         <HelmetProvider>
             <Helmet>
@@ -16,4 +16,4 @@ const PokemonListDetails: React.FC = () => {
     </>;
 }
 
-export default PokemonListDetails;
+export default PokemonDetails;

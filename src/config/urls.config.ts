@@ -1,7 +1,7 @@
 const URLConfig = {
   HOME: '/',
   NOT_FOUND: '/not-found',
-  POKEMON_LIST: '/pockemon-list',
+  POKEMON_LIST: '/pockemons',
 };
 
 export default URLConfig;

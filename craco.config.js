@@ -7,7 +7,7 @@ const CracoAlias = require("craco-alias");
           options: {
              source: "tsconfig",
              baseUrl: "./src",
-             tsConfigPath: "./tsconfig.json"
+             tsConfigPath: "./tsconfig.paths.json"
           }
        }
     ]

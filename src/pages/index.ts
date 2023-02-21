@@ -1,3 +1,3 @@
 export { default as Home } from './Home';
-export { default as PokemonList } from './PokemonList';
-export { default as PokemonListDetails } from './PokemonListDetails';
+export { default as PokemonList } from './Pokemons';
+export { default as PokemonListDetails } from './PokemonsDetails';

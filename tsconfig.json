@@ -19,14 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@Components/*" : ["./components/*"],
-      "@Pages/*" : ["./pages/*"],
-      "@Config/*" : ["./config/*"],
-      "@Shared/*" : ["./shared/*"],
-      "@Layout/*" : ["./layout/*"]
-    }
+    "jsx": "react-jsx"
   },
   "include": [
     "src"

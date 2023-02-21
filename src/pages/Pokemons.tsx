@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import * as Components from '@Components/index';
 
-const PokemonList: React.FC = () => {
+const Pokemons: React.FC = () => {
     return <>
         <HelmetProvider>
             <Helmet>
@@ -9,11 +10,12 @@ const PokemonList: React.FC = () => {
             </Helmet>
 
             <div>
-                Pockemon list
+                <h1>List of Pokemons</h1>
+                <Components.PokemonList />
             </div>
 
         </HelmetProvider>
     </>;
 }
 
-export default PokemonList;
+export default Pokemons;

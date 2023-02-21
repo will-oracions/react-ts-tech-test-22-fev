@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import * as Components from '@Components/index';
 import { Link } from 'react-router-dom';
 import URLConfig from '@Config/urls.config';
 
