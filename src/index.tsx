@@ -2,10 +2,12 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ChakraProvider } from '@chakra-ui/react';
 
 import './index.css';
 import App from './App';
 import Loading from '@Pages/Loading';
+import AppTheme from './custom.theme.chakra';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,7 +19,11 @@ root.render(
   <React.StrictMode>
     <Suspense fallback={<Loading />}>
       <QueryClientProvider client={queryClient}>
-        <App />
+
+        <ChakraProvider theme={AppTheme}>
+          <App />
+        </ChakraProvider>
+
       </QueryClientProvider>
     </Suspense>
   </React.StrictMode>
