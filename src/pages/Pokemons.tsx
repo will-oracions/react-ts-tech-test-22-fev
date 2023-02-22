@@ -3,10 +3,10 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import * as Components from '@Components/index';
 import PokemonsAPI from '@Api/pokemons.api';
 import { useQuery } from '@tanstack/react-query';
-import { AppLoader } from '@Shared/index';
 import Constants from '@Config/contants.config';
 import { Box, Heading } from '@chakra-ui/react';
 import AppContainer from '@Shared/components/AppContainer';
+import Loading from './Loading';
 
 
 const Pokemons: React.FC = () => {
@@ -15,7 +15,7 @@ const Pokemons: React.FC = () => {
         queryFn: PokemonsAPI.findAllPokemons,
     });
 
-    if (isLoading) return <AppLoader />
+    if (isLoading) return <Loading />
     if (isError || !pokemons) return <div>Error</div>;
         
     return <>

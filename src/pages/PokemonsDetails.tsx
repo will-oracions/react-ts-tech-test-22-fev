@@ -1,11 +1,11 @@
 import PokemonsAPI from '@Api/pokemons.api';
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import AppContainer from '@Shared/components/AppContainer';
-import { AppLoader } from '@Shared/index';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
+import Loading from './Loading';
 
 const PokemonDetails: React.FC = () => {
     const params = useParams();
@@ -15,7 +15,7 @@ const PokemonDetails: React.FC = () => {
         queryFn: PokemonsAPI.findByPokemonId(Number(params.id)),
     });
 
-    if (isLoading) return <AppLoader />
+    if (isLoading) return <Loading />;
     if (isError) return <div>Error: Cannot get pokemon details</div>;
 
 
