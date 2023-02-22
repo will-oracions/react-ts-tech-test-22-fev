@@ -8,7 +8,7 @@ import AppContainer from '@Shared/components/AppContainer';
 
 const Header: React.FC = () => {
   return <>
-    <Box bg="white" h={{ base: '80px', md: '60px' }}>
+    <Box bg="white" h={{ base: '80px', md: '60px' }} zIndex="10">
       <AppContainer>
 
         <Flex w="100%" h="100%" direction={{ base: 'column', md: 'row' }} justifyContent={{ base: 'center', md: 'space-between' }} alignItems="center">
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             <Heading fontSize="20px">{EnvConfig.APP_NAME}</Heading>
           </NavLink>
 
-          <List display="flex" color="tomato">
+          <List display="flex" color="tomato" fontWeight="semibold">
 
             <NavLink to={URLConfig.HOME}>
               <ListItem mx="1rem">
