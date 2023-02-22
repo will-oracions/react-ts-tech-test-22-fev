@@ -7,7 +7,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import './index.css';
 import App from './App';
 import Loading from '@Pages/Loading';
-import AppTheme from './custom.theme.chakra';
+import AppTheme from './helpers/custom-theme.helper';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
