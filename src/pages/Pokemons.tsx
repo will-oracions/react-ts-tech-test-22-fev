@@ -17,6 +17,8 @@ const Pokemons: React.FC = () => {
 
     if (isLoading) return <AppLoader />
     if (isError || !pokemons) return <div>Error</div>;
+
+    console.log(pokemons);
         
     return <>
         <HelmetProvider>
