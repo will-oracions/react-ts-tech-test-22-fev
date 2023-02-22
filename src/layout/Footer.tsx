@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return <>
-    <Box bg="gray.200" h="60px" zIndex="10">
+    <Box bg="gray.200" py="1rem" zIndex="10">
       <AppContainer>
         <Flex w="100%" h="100%" alignItems="center" justifyContent="center">
           <Image w="30px" h="30px" src="/assets/images/art.png" alt="art" />

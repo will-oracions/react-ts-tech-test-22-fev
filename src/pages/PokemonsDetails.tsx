@@ -22,7 +22,7 @@ const PokemonDetails: React.FC = () => {
     return <>
         <HelmetProvider>
             <Helmet>
-                <title>{ pokemon.name } | Details</title>
+                <title> | Details</title>
             </Helmet>
 
             <AppContainer>
@@ -35,7 +35,7 @@ const PokemonDetails: React.FC = () => {
 
                     <Flex w="100%" direction={{ base: 'column', md: 'row' }}>
                         <Box w="100%" maxW="430px" min-h="430px" borderRadius="4px" bg="gray.200">
-                            <Image w="100%" h="100%" objectFit="contain" src="/assets/images/001.png" alt="pokemon avatar" />
+                            <Image w="100%" h="100%" objectFit="contain" src={ pokemon.image || "/assets/images/001.png" } alt="pokemon avatar" />
                         </Box>
 
                         <Box ml="1rem">

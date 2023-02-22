@@ -12,7 +12,7 @@ const PokemonList: React.FC<Props> = ({ pokemons }) => {
     </Box>);
 
     return <>
-        <Box w="100%">
+        <Box w="100%" display="flex" justifyContent="center" flexWrap="wrap">
             {displayPockemons()}
         </Box>
     </>;

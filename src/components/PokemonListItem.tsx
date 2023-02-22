@@ -33,10 +33,10 @@ const PokemonListItem: React.FC<Props> = ({ pokemon }) => {
     }
 
     return <>
-        <Box w="100%" maxW={{ base: '100%', md: '205px' }}>
+        <Box w="100%" maxW={{ base: '100%', md: '205px' }} mx="0.25rem" my="1rem">
             <Link to={`${URLConfig.POKEMON_LIST}/${pokemon.id}`}>
                 <Box w="100%" h="205px" borderRadius="4px" bg="gray.200">
-                    <Image w="100%" h="100%" objectFit="contain" src="/assets/images/001.png" alt="pokemon avatar" />
+                    <Image w="100%" h="100%" objectFit="contain" src={ pokemon.image || "/assets/images/001.png"} alt="pokemon avatar" />
                 </Box>
             </Link>
 

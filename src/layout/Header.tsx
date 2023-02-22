@@ -8,7 +8,7 @@ import AppContainer from '@Shared/components/AppContainer';
 
 const Header: React.FC = () => {
   return <>
-    <Box bg="white" h={{ base: '80px', md: '60px' }} zIndex="10">
+    <Box bg="white" py={{ base: '1rem' }} zIndex="10">
       <AppContainer>
 
         <Flex w="100%" h="100%" direction={{ base: 'column', md: 'row' }} justifyContent={{ base: 'center', md: 'space-between' }} alignItems="center">

@@ -26,7 +26,7 @@ const Pokemons: React.FC = () => {
                 </Helmet>
 
                 <AppContainer>
-                    <Box bg="white" w="100%" maxW="875px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
+                    <Box bg="white" w="100%" maxW="900px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
                         <Heading color="tomato" fontSize="1.4rem" mb="1rem">List of Pokemons ({pokemons.length})</Heading>
                         <Components.PokemonList pokemons={pokemons} />
                     </Box>
