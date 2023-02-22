@@ -31,7 +31,8 @@
     "build": "craco build",
     "test": "craco test",
     "start:json-server": "json-server ./src/fake/pokemons.json -p 4000",
-    "prestart": "craco test"
+    "prestart": "yarn install",
+    "pretest": "yarn install"
   },
   "eslintConfig": {
     "extends": [
