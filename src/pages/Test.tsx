@@ -1,6 +1,6 @@
 import React from 'react';
-import { Heading, Stack, Text } from "@chakra-ui/layout"
-import { Button } from '@chakra-ui/react';
+import { Heading, Stack, Text,  } from "@chakra-ui/layout"
+import { Button, Flex, Box, Center } from '@chakra-ui/react';
 
 const Test: React.FC = () => {
     return <>
@@ -16,6 +16,19 @@ const Test: React.FC = () => {
             <Button bg="black.100" color="white.100">
                 Click me
             </Button>
+        </Stack>
+
+        <Flex justifyContent="space-between" direction={{ base: 'column', md: 'row'}}>
+            <Box borderWidth="2px" borderRadius="lg" borderColor="black.100" bg="tomato" w="100%" maxWidth={{ base: '100%', md: '200px'}} h="50px"></Box>
+            <Box borderWidth="2px" borderRadius="lg" borderColor="black.100" bg="blue.400" w="100%" maxWidth={{ base: '100%', md: '200px'}} h="50px"></Box>
+            <Box borderWidth="2px" borderRadius="lg" borderColor="black.100" bg="green.400" w="100%" maxWidth={{ base: '100%', md: '200px'}} h="50px"></Box>
+            <Box borderWidth="2px" borderRadius="lg" borderColor="black.100" bg="yellow.400" w="100%" maxWidth={{ base: '100%', md: '200px'}} h="50px"></Box>
+        </Flex>
+
+        <Stack>
+            <Button maxWidth={{ base: '100px', md: '200px'}}>Button1</Button>
+            <Button maxWidth={{ base: '100px', md: '200px'}}>Button2</Button>
+            <Button maxWidth={{ base: '100px', md: '200px'}}>Button3</Button>
         </Stack>
     </>;
 }
