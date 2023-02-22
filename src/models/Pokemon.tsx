@@ -11,7 +11,6 @@ export type PokemonModelType = {
 };
 
 export const PokemonAdapter = (item: any): PokemonModel => {
-    console.log(item);
     return {
         id: item.id || '',
         image: item.image || '',

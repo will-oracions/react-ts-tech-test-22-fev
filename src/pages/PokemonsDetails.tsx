@@ -1,4 +1,6 @@
 import PokemonsAPI from '@Api/pokemons.api';
+import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import AppContainer from '@Shared/components/AppContainer';
 import { AppLoader } from '@Shared/index';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
@@ -23,9 +25,45 @@ const PokemonDetails: React.FC = () => {
                 <title>{ pokemon.name } | Details</title>
             </Helmet>
 
-            <div>
-                { pokemon.name } Details
-            </div>
+            <AppContainer>
+                <Box bg="white" w="875px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
+                    
+                    <Flex>
+                        <Heading color="tomato" fontSize="1.4rem" mb="1rem">{ pokemon.name }</Heading>
+                        <Text>No. 000{pokemon.id}</Text>
+                    </Flex>
+
+                    <Flex direction={{ base: 'column', md: 'row' }}>
+                        <Box w="430px" h="430px" borderRadius="4px" bg="gray.200">
+                            <Image w="100%" h="100%" objectFit="contain" src="/assets/images/001.png" alt="pokemon avatar" />
+                        </Box>
+
+                        <Box ml="1rem">
+                            <Text fontSize="18px" fontWeight="medium" mb="2rem">Il y a une graine sur son dos depuis sa naissance. Elle grossit un peu chaque jour.</Text>
+
+                            <Box fontSize="18px" p="1rem" display="flex" flexWrap="wrap" alignItems="flex-start" w="429px" h="243px" bg="blue.300" borderRadius="2xl">
+                                <Box w="50%">
+                                    <Text color="white">Taille</Text>
+                                    <Text>0,7 m</Text>
+                                </Box>
+
+                                <Box w="50%">
+                                    <Text color="white">Categorie</Text>
+                                    <Text>Graine</Text>
+                                </Box>
+                                <Box w="50%">
+                                    <Text color="white">Poids</Text>
+                                    <Text>6,9 kg</Text>
+                                </Box>
+                                <Box w="50%">
+                                    <Text color="white">Talent</Text>
+                                    <Text>Anglais</Text>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Flex>
+                </Box>
+            </AppContainer>
 
         </HelmetProvider>
     </>;
