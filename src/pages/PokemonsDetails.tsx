@@ -26,22 +26,22 @@ const PokemonDetails: React.FC = () => {
             </Helmet>
 
             <AppContainer>
-                <Box bg="white" w="875px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
+                <Box bg="white" w="100%" maxW="875px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
                     
-                    <Flex>
-                        <Heading color="tomato" fontSize="1.4rem" mb="1rem">{ pokemon.name }</Heading>
-                        <Text>No. 000{pokemon.id}</Text>
+                    <Flex my="1rem" fontSize="2rem" textAlign="center" justifyContent="center">
+                        <Heading mb="1rem">{ pokemon.name }</Heading>
+                        <Text>&nbsp;No. 000{pokemon.id}</Text>
                     </Flex>
 
-                    <Flex direction={{ base: 'column', md: 'row' }}>
-                        <Box w="430px" h="430px" borderRadius="4px" bg="gray.200">
+                    <Flex w="100%" direction={{ base: 'column', md: 'row' }}>
+                        <Box w="100%" maxW="430px" min-h="430px" borderRadius="4px" bg="gray.200">
                             <Image w="100%" h="100%" objectFit="contain" src="/assets/images/001.png" alt="pokemon avatar" />
                         </Box>
 
                         <Box ml="1rem">
-                            <Text fontSize="18px" fontWeight="medium" mb="2rem">Il y a une graine sur son dos depuis sa naissance. Elle grossit un peu chaque jour.</Text>
+                            <Text fontSize="18px" fontWeight="medium" mb="2rem" mt={{ base: '1rem', md: '0' }}>Il y a une graine sur son dos depuis sa naissance. Elle grossit un peu chaque jour.</Text>
 
-                            <Box fontSize="18px" p="1rem" display="flex" flexWrap="wrap" alignItems="flex-start" w="429px" h="243px" bg="blue.300" borderRadius="2xl">
+                            <Box fontSize="18px" p="1rem" display="flex" flexWrap="wrap" alignItems="flex-start" w="100%" maxW="429px" mx="auto" h="243px" bg="blue.300" borderRadius="2xl">
                                 <Box w="50%">
                                     <Text color="white">Taille</Text>
                                     <Text>0,7 m</Text>

@@ -33,9 +33,9 @@ const PokemonListItem: React.FC<Props> = ({ pokemon }) => {
     }
 
     return <>
-        <Box>
+        <Box w="100%" maxW={{ base: '100%', md: '205px' }}>
             <Link to={`${URLConfig.POKEMON_LIST}/${pokemon.id}`}>
-                <Box w="205px" h="205px" borderRadius="4px" bg="gray.200">
+                <Box w="100%" h="205px" borderRadius="4px" bg="gray.200">
                     <Image w="100%" h="100%" objectFit="contain" src="/assets/images/001.png" alt="pokemon avatar" />
                 </Box>
             </Link>

@@ -1,19 +1,20 @@
 import React from 'react';
 import * as Components from '@Components/index';
+import { Box } from '@chakra-ui/react';
 
 type Props = {
     pokemons: any[];
 };
 
 const PokemonList: React.FC<Props> = ({ pokemons }) => {
-    const displayPockemons = () => pokemons.map((pokemon: any, i: number) => <div key={i}>
+    const displayPockemons = () => pokemons.map((pokemon: any, i: number) => <Box key={i}>
         <Components.PokemonListItem pokemon={pokemon} />
-    </div>);
+    </Box>);
 
     return <>
-        <div>
+        <Box w="100%">
             {displayPockemons()}
-        </div>
+        </Box>
     </>;
 }
 
