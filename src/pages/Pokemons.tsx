@@ -16,8 +16,17 @@ const Pokemons: React.FC = () => {
     });
 
     if (isLoading) return <Loading />
-    if (isError || !pokemons) return <div>Error</div>;
-        
+    if (isError || !pokemons) return <Box color="red.400">Error: Cannot get pokemons list :(</Box>;
+    // const [pokemons, setPokemons] = React.useState([]);
+    // React.useEffect(() => {
+    //     (async () => {
+    //         const pokemons = await PokemonsAPI.findAllPokemons();
+    //         console.log('PPP: ', pokemons);
+
+    //         setPokemons(pokemons);
+    //     })();
+    // }, []);
+
     return <>
         <HelmetProvider>
             <Box>

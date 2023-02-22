@@ -10,19 +10,21 @@ import Loading from './Loading';
 const PokemonDetails: React.FC = () => {
     const params = useParams();
 
+    console.log('ID=', params.id);
     const { isLoading, isError, data: pokemon }  = useQuery({
         queryKey: [],
         queryFn: PokemonsAPI.findByPokemonId(Number(params.id)),
     });
 
     if (isLoading) return <Loading />;
-    if (isError) return <div>Error: Cannot get pokemon details</div>;
+    if (isError) return <Box color="red.500">Error: Cannot get pokemon details</Box>;
 
+    console.log(pokemon);
 
     return <>
         <HelmetProvider>
             <Helmet>
-                <title> | Details</title>
+                <title>{pokemon.name} | Details</title>
             </Helmet>
 
             <AppContainer>
@@ -34,11 +36,11 @@ const PokemonDetails: React.FC = () => {
                     </Flex>
 
                     <Flex w="100%" direction={{ base: 'column', md: 'row' }}>
-                        <Box w="100%" maxW="430px" min-h="430px" borderRadius="4px" bg="gray.200">
+                        <Box w="100%" mx="auto" maxW="430px" min-h="430px" borderRadius="4px" bg="gray.200">
                             <Image w="100%" h="100%" objectFit="contain" src={ pokemon.image || "/assets/images/001.png" } alt="pokemon avatar" />
                         </Box>
 
-                        <Box ml="1rem">
+                        <Box w="100%" ml={{ md: "1rem" }}>
                             <Text fontSize="18px" fontWeight="medium" mb="2rem" mt={{ base: '1rem', md: '0' }}>Il y a une graine sur son dos depuis sa naissance. Elle grossit un peu chaque jour.</Text>
 
                             <Box fontSize="18px" p="1rem" display="flex" flexWrap="wrap" alignItems="flex-start" w="100%" maxW="429px" mx="auto" h="243px" bg="blue.300" borderRadius="2xl">
