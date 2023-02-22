@@ -5,6 +5,8 @@ import PokemonsAPI from '@Api/pokemons.api';
 import { useQuery } from '@tanstack/react-query';
 import { AppLoader } from '@Shared/index';
 import Constants from '@Config/contants.config';
+import { Box, Heading } from '@chakra-ui/react';
+import AppContainer from '@Shared/components/AppContainer';
 
 
 const Pokemons: React.FC = () => {
@@ -18,15 +20,19 @@ const Pokemons: React.FC = () => {
         
     return <>
         <HelmetProvider>
-            <Helmet>
-                <title>Pockemon list</title>
-            </Helmet>
+            <Box>
+                <Helmet>
+                    <title>Pockemons List</title>
+                </Helmet>
 
-            <div>
-                <h1>List of Pokemons ({pokemons.length})</h1>
-                <Components.PokemonList pokemons={pokemons} />
-            </div>
+                <AppContainer>
+                    <Box bg="white" w="875px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
+                        <Heading color="tomato">List of Pokemons ({pokemons.length})</Heading>
+                        <Components.PokemonList pokemons={pokemons} />
+                    </Box>
+                </AppContainer>
 
+            </Box>
         </HelmetProvider>
     </>;
 }
