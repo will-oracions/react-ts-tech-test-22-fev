@@ -11,10 +11,10 @@ const AppRoutes: React.FC = () => {
       <Routes>
 
         <Route path={URLConfig.HOME} element={<AppLayout />}>
-          <Route index element={<Pages.Home />} />
+          <Route index element={<Navigate to={URLConfig.POKEMON_LIST} />} />
           <Route path={URLConfig.POKEMON_LIST} element={<Pages.PokemonList />} />
           <Route path={`${URLConfig.POKEMON_LIST}/:id`} element={<Pages.PokemonListDetails />} />
-          <Route path='/test' element={<Pages.Test />} />
+          {/* <Route path='/test' element={<Pages.Test />} /> */}
 
           {/* Not found */}
           <Route path={URLConfig.NOT_FOUND} element={<NotFound />} />
