@@ -17,8 +17,6 @@ const Pokemons: React.FC = () => {
 
     if (isLoading) return <AppLoader />
     if (isError || !pokemons) return <div>Error</div>;
-
-    console.log(pokemons);
         
     return <>
         <HelmetProvider>
@@ -29,7 +27,7 @@ const Pokemons: React.FC = () => {
 
                 <AppContainer>
                     <Box bg="white" w="875px" minH="400px" mx="auto" boxShadow="sm" borderRadius="4px" p="1rem" mt="2rem">
-                        <Heading color="tomato">List of Pokemons ({pokemons.length})</Heading>
+                        <Heading color="tomato" fontSize="1.4rem" mb="1rem">List of Pokemons ({pokemons.length})</Heading>
                         <Components.PokemonList pokemons={pokemons} />
                     </Box>
                 </AppContainer>
