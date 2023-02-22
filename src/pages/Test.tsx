@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Stack, Text,  } from "@chakra-ui/layout"
-import { Button, Flex, Box, Center } from '@chakra-ui/react';
+import { Button, Flex, Box } from '@chakra-ui/react';
 
 const Test: React.FC = () => {
     return <>

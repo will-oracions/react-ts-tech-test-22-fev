@@ -18,11 +18,11 @@ const Header: React.FC = () => {
 
           <List display="flex" color="tomato" fontWeight="semibold">
 
-            <NavLink to={URLConfig.HOME}>
+            {/* <NavLink to={URLConfig.HOME}>
               <ListItem mx="1rem">
                 Home
               </ListItem>
-            </NavLink>
+            </NavLink> */}
 
             <NavLink to={URLConfig.POKEMON_LIST}>
               <ListItem mx="1rem">
